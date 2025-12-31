@@ -21,9 +21,16 @@
 
         }
 
+        .sorteio {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         button {
             padding: 10px 20px;
             font-size: 16px;
+            margin-top: 10px;
             background: #4CAF50;
             color: white;
             border: none;
@@ -45,11 +52,22 @@
 <body>
     <div class="sorteio">
         <h1>Bem-vindo ao Sorteio!</h1>
-        <p>Clique no botão abaixo para participar do sorteio.</p>
-        <textarea name="" id="lista"></textarea>
-        <button onclick="numeroSorteio()">Participar do Sorteio</button>
+        <p>Escolha o tipo de sorteio e clique no botão:</p>
+
+        <!-- Seletor -->
+        <select id="tipoSorteio">
+            <option value="numero">Número</option>
+            <option value="nome">Nome</option>
+        </select>
+
+        <!-- Lista de nomes ou intervalo de números -->
+        <textarea id="lista"
+            placeholder="Digite nomes separados por linha ou intervalo de números (ex: 1-50)"></textarea>
+
+        <button onclick="realizarSorteio()">Participar do Sorteio</button>
         <h2 id="resultado"></h2>
     </div>
+
 </body>
 <script src="num.js"></script>
 
