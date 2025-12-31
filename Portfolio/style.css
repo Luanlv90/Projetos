@@ -1,0 +1,159 @@
+body {
+    background-color: black;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+    background-color: white;
+    height: 50px;
+    width: 60px;
+    align-items: flex-end;
+}
+
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.MenuItems {
+    text-align: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+.menu-celular {
+    filter: invert(100%) sepia(100%) saturate(10000%) hue-rotate(180deg);
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+}
+
+.conteinar {
+    margin: 1px 50px;
+    padding: 5px 0px 0px 0px;
+    background-color: white;
+    margin-right: 19px;
+}
+
+.cool-1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.texto {
+    height: 40px;
+    width: 400px;
+    padding-left: 50px;
+}
+
+.img {
+    flex-basis: 30%;
+    max-width: 250px;
+    margin-bottom: 30px;
+}
+
+.img img {
+    width: 300%;
+    margin-left: 50px;
+    object-fit: cover;
+    object-position: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+footer a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/*menu celular*/
+
+@media only screen and (max-width:800px) {
+    nav {
+        background: none;
+    }
+
+    nav ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: white;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin-top: 10px;
+        margin-right: 50px;
+        margin-bottom: 10px;
+    }
+
+
+
+    .menu-celular {
+        display: block;
+        text-decoration: none;
+    }
+}
+
+/*celular 600*/
+@media only screen and (max-width:600px) {
+
+    .conteinar {
+        text-align: center;
+    }
+
+    .col-1,
+    .col-0 {
+        flex-basis: 100%;
+    }
+
+    .col-1 {
+        font-size: 27px;
+    }
+
+    .rodape-col-0 {
+        text-align: center;
+    }
+
+    .col-1 p {
+        font-size: 24px;
+    }
+
+    .conteinar {
+        display: block;
+    }
+
+}
